@@ -1,0 +1,194 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Student Exam Performance Indicator</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Student Exam Performance Prediction</legend>
+        </h1>
+        
+        <!-- Gender -->
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-control" name="gender" placeholder="Select your Gender" required>
+                <option class="placeholder" selected disabled value="">Select your Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <!-- Partner -->
+        <div class="mb-3">
+            <label class="form-label">Partner</label>
+            <select class="form-control" name="partner" placeholder="Do you have a partner?" required>
+                <option class="placeholder" selected disabled value="">Select Partner Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <!-- Dependents -->
+        <div class="mb-3">
+            <label class="form-label">Dependents</label>
+            <select class="form-control" name="dependents" placeholder="Do you have dependents?" required>
+                <option class="placeholder" selected disabled value="">Select Dependents Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <!-- Phone Service -->
+        <div class="mb-3">
+            <label class="form-label">Phone Service</label>
+            <select class="form-control" name="phone_service" placeholder="Do you have phone service?" required>
+                <option class="placeholder" selected disabled value="">Select Phone Service Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <!-- Multiple Lines -->
+        <div class="mb-3">
+            <label class="form-label">Multiple Lines</label>
+            <select class="form-control" name="multiple_lines" placeholder="Do you have multiple lines?" required>
+                <option class="placeholder" selected disabled value="">Select Multiple Lines Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="no phone service">No Phone Service</option>
+            </select>
+        </div>
+
+        <!-- Internet Service -->
+        <div class="mb-3">
+            <label class="form-label">Internet Service</label>
+            <select class="form-control" name="internet_service" placeholder="Select your Internet Service" required>
+                <option class="placeholder" selected disabled value="">Select Internet Service</option>
+                <option value="dsl">DSL</option>
+                <option value="fiber optic">Fiber optic</option>
+                <option value="no">No Internet Service</option>
+            </select>
+        </div>
+
+        <!-- Online Security -->
+        <div class="mb-3">
+            <label class="form-label">Online Security</label>
+            <select class="form-control" name="online_security" placeholder="Do you have online security?" required>
+                <option class="placeholder" selected disabled value="">Select Online Security Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="no internet service">No Internet Service</option>
+            </select>
+        </div>
+
+        <!-- Online Backup -->
+        <div class="mb-3">
+            <label class="form-label">Online Backup</label>
+            <select class="form-control" name="online_backup" placeholder="Do you have online backup?" required>
+                <option class="placeholder" selected disabled value="">Select Online Backup Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="no internet service">No Internet Service</option>
+            </select>
+        </div>
+
+        <!-- Device Protection -->
+        <div class="mb-3">
+            <label class="form-label">Device Protection</label>
+            <select class="form-control" name="device_protection" placeholder="Do you have device protection?" required>
+                <option class="placeholder" selected disabled value="">Select Device Protection Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="no internet service">No Internet Service</option>
+            </select>
+        </div>
+
+        <!-- Tech Support -->
+        <div class="mb-3">
+            <label class="form-label">Tech Support</label>
+            <select class="form-control" name="tech_support" placeholder="Do you have tech support?" required>
+                <option class="placeholder" selected disabled value="">Select Tech Support Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="no internet service">No Internet Service</option>
+            </select>
+        </div>
+
+        <!-- Streaming TV -->
+        <div class="mb-3">
+            <label class="form-label">Streaming TV</label>
+            <select class="form-control" name="streaming_tv" placeholder="Do you have Streaming TV?" required>
+                <option class="placeholder" selected disabled value="">Select Streaming TV Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="no internet service">No Internet Service</option>
+            </select>
+        </div>
+
+        <!-- Streaming Movies -->
+        <div class="mb-3">
+            <label class="form-label">Streaming Movies</label>
+            <select class="form-control" name="streaming_movies" placeholder="Do you have Streaming Movies?" required>
+                <option class="placeholder" selected disabled value="">Select Streaming Movies Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="no internet service">No Internet Service</option>
+            </select>
+        </div>
+
+        <!-- Contract -->
+        <div class="mb-3">
+            <label class="form-label">Contract Type</label>
+            <select class="form-control" name="contract" placeholder="Select your Contract Type" required>
+                <option class="placeholder" selected disabled value="">Select Contract Type</option>
+                <option value="month-to-month">Month-to-month</option>
+                <option value="one year">One year</option>
+                <option value="two year">Two year</option>
+            </select>
+        </div>
+
+        <!-- Paperless Billing -->
+        <div class="mb-3">
+            <label class="form-label">Paperless Billing</label>
+            <select class="form-control" name="paperless_billing" placeholder="Do you have paperless billing?" required>
+                <option class="placeholder" selected disabled value="">Select Paperless Billing Status</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="mb-3">
+            <label class="form-label">Payment Method</label>
+            <select class="form-control" name="payment_method" placeholder="Select your Payment Method" required>
+                <option class="placeholder" selected disabled value="">Select Payment Method</option>
+                <option value="bank transfer (automatic)">Bank transfer (automatic)</option>
+                <option value="credit card (automatic)">Credit card (automatic)</option>
+                <option value="electronic check">Electronic check</option>
+                <option value="mailed check">Mailed check</option>
+            </select>
+        </div>
+
+        <!-- Tenure Group -->
+        <div class="mb-3">
+            <label class="form-label">Tenure Group</label>
+            <select class="form-control" name="tenure_group" placeholder="Select your Tenure Group" required>
+                <option class="placeholder" selected disabled value="">Select Tenure Group</option>
+                <option value="1 - 12">1 - 12 months</option>
+                <option value="13 - 24">13 - 24 months</option>
+                <option value="25 - 36">25 - 36 months</option>
+                <option value="37 - 48">37 - 48 months</option>
+                <option value="49 - 60">49 - 60 months</option>
+                <option value="61 - 72">61 - 72 months</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict Exam Performance" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction for whether a customer is churn or not {{results}}
+    </h2>
+   <body>
+</html>

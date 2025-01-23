@@ -1,6 +1,3 @@
 In this repository, we have performed the end to end Exploratory Data Analysis, and idenfitied the characteristics of the customers that are more likely to churn, and I have used them wisely to create a model, and lately, have deployed the model.
 
-🟢 For EDA, please refer to : Churn Analysis - EDA.ipynb
-🟢 For Model Building, please refer to: Churn Analysis - Model Building.ipynb
-🟢 For Model Deployment, please refer to app.py
-🔵 Creating the flask API
+For Exploratory Data Analysis (EDA), refer to the "Churn Analysis - EDA.ipynb" notebook, where you'll explore and analyze the data to uncover key insights and patterns. When it comes to model building, the "Churn Analysis - Model Building.ipynb" notebook provides a detailed guide on training and evaluating a model using the churn data. For model deployment, the "app.py" file outlines the process of deploying your model. It includes instructions on creating a Flask API, which sets up a web service to handle requests and serve predictions from the trained model.
